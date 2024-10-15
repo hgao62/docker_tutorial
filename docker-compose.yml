@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  basic_example_container:
+    build: 
+      context: . 
+      dockerfile: Dockerfile
+
+  fastapi_container:
+    build: 
+      context: . #build using docker file in current directory
+      dockerfile: Dockerfile _fastapi
+    ports:
+      - "9000:8000" # first number is host port, second number is container port
